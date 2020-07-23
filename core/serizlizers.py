@@ -5,7 +5,8 @@ from rest_framework import serializers
 class BookSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Book
-        fields = ["url", "title", "author", "price", "short_description"]
+        fields = ["url", "title", "slug", "author",
+                  "image", "price", "short_description"]
 
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
